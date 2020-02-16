@@ -11,7 +11,7 @@ function __autoload($className)
 $pipeline = new Pipeline;
 $arr = array(1, 2, 3, 4, 5, 6, 7);
 
-$pipeline = $pipeline
+$filteredArr = $pipeline
     ->send($arr)
     ->through([
         Odd::class,
@@ -20,5 +20,5 @@ $pipeline = $pipeline
     ->thenReturn();
 
 echo '<pre>';
-var_dump($pipeline);
+var_dump($filteredArr);
 echo '</pre>';
